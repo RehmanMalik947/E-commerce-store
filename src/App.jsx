@@ -19,30 +19,30 @@ function App() {
           
           <div>
             <div className='flex flex-wrap gap-2 ' >
-              <div className='shadow-lg text-center h-48 w-48 object-contain pb-3'>
+              <div className='shadow-lg text-center h-auto w-48 object-contain pb-3'>
                 <img src='https://wearjewelery.com/cdn/shop/files/IMG_2013.heic?v=1734114252&width=1445' ></img>
                 <h3>Butterfly Necklace</h3>
                 <h3>Rs.1250</h3>
               </div>
 
-              <div className='shadow-lg text-center h-48 w-48 object-cover pb-4'>
+              <div className='shadow-lg text-center h-auto w-48 object-cover pb-4'>
                 <img src='https://wearjewelery.com/cdn/shop/files/IMG_2013.heic?v=1734114252&width=1445' ></img>
                 <h3>Butterfly Necklace</h3>
                 <h3>Rs.1250</h3>
               </div>
 
-              <div className='shadow-lg text-center h-48 w-48 object-cover pb-4'>
+              <div className='shadow-lg text-center h-auto w-48 object-cover pb-4'>
                 <img src='https://wearjewelery.com/cdn/shop/files/IMG_2013.heic?v=1734114252&width=1445' ></img>
                 <h3>Butterfly Necklace</h3>
                 <h3>Rs.1250</h3>
               </div>
 
-              <div className='shadow-lg text-center h-48 w-48 object-cover pb-4'>
+              <div className='shadow-lg text-center h-auto w-48 object-cover pb-4'>
                 <img src='https://wearjewelery.com/cdn/shop/files/IMG_2013.heic?v=1734114252&width=1445' ></img>
                 <h3>Butterfly Necklace</h3>
                 <h3>Rs.1250</h3>
               </div>
-              <div className='shadow-lg text-center h-48 w-48 object-cover pb-4'>
+              <div className='shadow-lg text-center h-auto w-48 object-cover pb-4'>
                 <img src='https://wearjewelery.com/cdn/shop/files/IMG_2013.heic?v=1734114252&width=1445' ></img>
                 <h3>Butterfly Necklace</h3>
                 <h3>Rs.1250</h3>
