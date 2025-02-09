@@ -1,23 +1,21 @@
 import { useEffect, useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+
 import './App.css';
 import Category from './category';
-import axios from 'axios';
-
+import axios from 'axios'
 
 function App() {
   const [count, setCount] = useState(0);
-  // let [finalCtegory,setFinalCategory]=useState([]);
-  // const getCategory=()=>
-  // {
-  //   axios.get('https://dummyjson.com/products')
-  //   .then((res)=>res.data)
-  //   .then((finalres)=>{setFinalCategory(finalres)})
-  // }
-  // useEffect(() => {
-  //   getCategory();
-  // }, [])
+  let [finalCtegory,setFinalCategory]=useState([]);
+  const getCategory=()=>
+  {
+    axios.get('https://dummyjson.com/products')
+    .then((res)=>res.data)
+    .then((finalres)=>{setFinalCategory(finalres.products)})
+  }
+  useEffect(() => {
+    getCategory();
+  }, [])
 
   
 
@@ -35,11 +33,10 @@ function App() {
           
           <div>
             <div className='grid grid-cols-4 gap-2 ' >
-                <ProductItems/>
-                <ProductItems/>
-                <ProductItems/>
-                <ProductItems/>
-                <ProductItems/>
+            {finalCtegory.map((v) => (
+                  <ProductItems key={v.id} title={v.title} description={v.description} images={v.images} />
+                ))}
+                
             </div>
           </div>
         </div>
@@ -54,13 +51,14 @@ function App() {
 
 export default App;
 
-function ProductItems()
+function ProductItems({title , description , images})
 {
+  
   return(
     <div className='shadow-lg text-center h-auto w-48 object-contain pb-3'>
-    <img src='https://wearjewelery.com/cdn/shop/files/IMG_2013.heic?v=1734114252&width=1445' ></img>
-    <h3>Butterfly Necklace</h3>
-    <h3>Rs.1250</h3>
+    <img src={images} ></img>
+    <h3>{title}</h3>
+    <p className='mt-1 text-sm text-gray-600 line-clamp-2 overflow-hidden overflow-ellipsis'>{description}</p>
   </div>
   )
 }
