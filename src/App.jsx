@@ -64,7 +64,7 @@ function App() {
           <div>
             <div className='grid grid-cols-4 gap-2 ' >
             {finalProduct.map((v) => (
-                  <ProductItems key={v.id} title={v.title} description={v.description} images={v.images} />
+                  <ProductItems key={v.id} title={v.title} description={v.description} images={v.images} price={v.price} />
                 ))}
                 
             </div>
@@ -81,7 +81,7 @@ function App() {
 
 export default App;
 
-function ProductItems({title , description , images})
+function ProductItems({title , description , images , price })
 {
   
   return(
@@ -89,6 +89,7 @@ function ProductItems({title , description , images})
     <img src={images} ></img>
     <h3>{title.substring(0,12)}</h3>
     <p className='mt-1 text-sm text-gray-600 line-clamp-2 overflow-hidden overflow-ellipsis'>{description.substring(0,40)}</p>
+    <h1 className='font-bold'>${price}</h1>
   </div>
   )
 }
